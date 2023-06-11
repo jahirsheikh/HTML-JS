@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result_form</title>
+</head>
+<body>
+
+    Result Form
+<pre>
+
+
+    Name 
+    <span id="name"></span>
+    Email
+    <span id="email"></span>
+    Password
+    <span id="password"></span>
+    
+    Gender
+    <span id="gender"></span>
+    Subject
+    <span id="subject"></span>
+    Hobby
+    <span id="hobby"></span>
+    About
+    <span id="about"></span>
+
+    
+</pre>
+
+
+<script>
+
+    document.getElementById("name").innerHTML=sessionStorage.getItem("name")
+    document.getElementById("email").innerHTML=sessionStorage.getItem("email")
+    document.getElementById("password").innerHTML=sessionStorage.getItem("password")
+    document.getElementById("gender").innerHTML=sessionStorage.getItem("gender")
+    document.getElementById("subject").innerHTML=sessionStorage.getItem("subject")
+    document.getElementById("hobby").innerHTML=sessionStorage.getItem("hobby")
+    document.getElementById("about").innerHTML=sessionStorage.getItem("about")
+    
+
+
+
+</script>
+
+
+
+</body>
+</html>

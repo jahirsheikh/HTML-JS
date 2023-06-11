@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <pre>   
+    <form action="result_form.html">
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <label>Email:</label>
+        <input type="email" id="email">
+        <label>Password:</label>
+        <input type="password" id="password">
+
+
+        <label for="">Gender:</label>
+        <input type="radio" name="gender" id="male"> Male
+        <input type="radio" name="gender" id="female"> Female
+        <input type="radio" name="gender" id="other"> other
+
+
+        <label for="">Subject</label>
+        <select id="Subject"> 
+
+            <option>JEE</option>
+            <option>PHP</option>
+            <option>C#</option>
+
+        </select>
+
+        <label for="">Hobby</label>
+        <input type="checkbox" value="Playing">Playing
+        <input type="checkbox" value="Gardening">Gardening
+        <input type="checkbox" value="Reading">Reading
+        <input type="checkbox" value="Swimming">Swimming
+
+        <label for="">About</label>
+        <textarea id="about" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="submit" onclick="dataTransfer()">
+
+
+        <script>
+
+            function dataTransfer(){
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const about = document.getElementById("about").value;
+         
+
+
+            sessionStorage.setItem("name",name);
+            sessionStorage.setItem("email",email);
+            sessionStorage.setItem("password",password);
+            sessionStorage.setItem("gender",gender);
+            sessionStorage.setItem("subject",subject);
+            sessionStorage.setItem("hobby",hobby);
+            sessionStorage.setItem("about",about);
+
+
+
+        }
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+    </form>
+
+
+
+</body>
+</html>
