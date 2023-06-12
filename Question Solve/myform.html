@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc form</title>
+</head>
+<body>
+
+    <form id="myform">
+
+        <label>Name</label>
+        <input type="text" name="" id="name"> <p></p>
+        <label>Contact</label>
+        <input type="text" name="" id="contact"> <p></p>
+        <label>Remarks</label><br>
+        <textarea name="" id="remarks" cols="30" rows="5"></textarea> <p></p>
+
+        <label for="">Gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <p></p>
+
+        <label for="course">Course</label><p></p>
+        <input type="checkbox" name="course" value="NI">NT
+        <input type="checkbox" name="course" value="JEE">JEE
+        <input type="checkbox" name="course" value="DDD">DDD <p></p>
+
+        <label for="location">Location</label>
+        <select name="" id="location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select> <p></p>
+
+        <input type="submit" value="submit"> <p></p>
+        <input type="reset" value="reset">
+
+
+    </form>
+
+    <script>
+
+        function datarun(event){
+            event.preventDefault();
+
+            const name=document.getElementById("name").value;
+            const contact=document.getElementById("contact").value;
+            const remarks=document.getElementById("remarks").value;
+            const location=document.getElementById("location").value;
+
+            const gender=document.querySelector('input[name="gender"]:checked').value;
+
+            let mycourse=[];
+            const course=document.querySelectorAll('input[name="course"]:checked');
+            course.forEach(function(course){
+                mycourse.push(course.value);
+            })
+
+            let output= "Name: "+name+ "<br>"
+                outputC= "Contact: "+contact+ "<br>"
+                outputR="Remarks: "+remarks+ "<br>";
+                outputG="Gender: "+gender+ "<br>";
+                outputCo="Course: "+mycourse.join(",")+ "<br>";
+                outputL="Location: "+location+ "<br>";
+
+                let newWindow=window.open("","_blank");
+                newWindow.document.write("<p>"+output+outputC+outputR+outputCo+outputL +"<p>" )
+
+        }
+
+        let form=document.getElementById("myform");
+
+            from.addEventListener("submit", datamove);
+
+
+
+
+
+        // function datamove(event){
+        //     event.preventDefault();
+
+
+        //     const name=document.getElementById("name").value;
+        //     const contact=document.getElementById("contact").value;
+        //     const remarks=document.getElementById("remarks").value;
+        //     const location=document.getElementById("location").value;
+
+
+        //     const gender=document.querySelector('input[type="radio"]:checked').value;
+
+        //     let mycourse=[];
+        //     const course=document.querySelectorAll('input[type="checkbox"]:checked').value;
+        //     course.forEach(function(course){
+        //         mycourse.push(course.value);
+        //     })
+
+
+        //     let output="Name: "+name+ "<br>";
+        //         outputC="Contact: "+contact+ "<br>";
+        //         outputR="Remarks: "+remarks+ "<br>";
+        //         outputG="Gender: "+gender+ "<br>";
+        //         outputCo="Course: "+mycourse.join(",")+ "<br>";
+        //         outputL="Location: "+location+ "<br>";
+
+        //         let newWindow=window.open("","_blank");
+
+        //         // newWindow.document.write("<p>"+ output+ "<br>"+outputC+ "<br>"+ "<br>"+outputR+ "<br>"+"<br>"+outputG+ "<br>"+"<br>"+outputCo+ "<br>"+"<br>"+outputL+ "<br>");
+        //             // newWindow.document.write("<p>"+ output+"<br>"+ outputC+"<br>"+ outputR+"<br>"+ outputG+"<br>"+ outputCo+"<br>"+ outputL+"</p>");
+
+        //             newWindow.document.write("<pre>"+ output +"</pre>");
+        // }
+
+        // let form=document.getElementById("myCourse");
+        // form.addEventListener("submit",datamove);
+
+//         function datamove(event) {
+//     event.preventDefault();
+
+//     const name = document.getElementById("name").value;
+//     const contact = document.getElementById("contact").value;
+//     const remarks = document.getElementById("remarks").value;
+//     const location = document.getElementById("location").value;
+
+//     const gender = document.querySelector('input[name="gender"]:checked').value;
+
+//     let mycourse = [];
+//     const courses = document.querySelectorAll('input[name="course"]:checked');
+//     courses.forEach(function (course) {
+//         mycourse.push(course.value);
+//     });
+
+//     let output = "Name: " + name + "<br>";
+//     let outputC = "Contact: " + contact + "<br>";
+//     let outputR = "Remarks: " + remarks + "<br>";
+//     let outputG = "Gender: " + gender + "<br>";
+//     let outputCo = "Course: " + mycourse.join(",") + "<br>";
+//     let outputL = "Location: " + location + "<br>";
+
+//     let newWindow = window.open("", "_blank");
+//     newWindow.document.write("<pre>" + output + outputC + outputR + outputG + outputCo + outputL + "</pre>");
+// }
+
+// let form = document.getElementById("myform");
+// form.addEventListener("submit", datamove);
+
+
+  
+    </script>
+    
+
+
+
+
+</body>
+</html>
